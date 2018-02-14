@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#89b0ff+0,06c9db+100 */
+      background: #89b0ff; /* Old browsers */
+      background: -moz-linear-gradient(-45deg, #89b0ff 0%, #06c9db 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, #89b0ff 0%,#06c9db 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg, #89b0ff 0%,#06c9db 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89b0ff', endColorstr='#06c9db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+      h1 {
+      text-align: center;
+    }
+    .messageWrapper {
+      display: grid;
+      grid-template-columns: 1fr 100px;
+      max-width: 600px;
+      margin: 0px auto;
+    }
+    .messages {
+      grid-column: span 2;
+      max-height: 400px;
+      min-height: 400px;  
+      overflow: scroll;
+      border: 1px solid black;
+      border-bottom: none;
+      padding-left: 10px;
+    }
+    .message {
+      height: 45px;
+      font-size: 20px;
+      padding-left: 5px;
+      width: 100%;
+      border: 1px solid black;
+      background: rgb(237, 237, 237);
+    }
+
+    .send {
+      background: rgb(6, 6, 72);
+      color: white;
+      border: 1px solid black;
+      border-left: none;
+      height: 45px;
+      font-size: 30px;
+      transition: 0.3s;
+    }
+
+    .send:disabled {
+      background: lightgrey;
+      color: black;
+    }
+  </style>
+  <title>Document</title>
+
+  <h1>🔥 Project Planning Chat🔥</h1>
+
+
+  <div class="messageWrapper">
+    <section class="messages">
+    </section>
+      <input type="text" class="message">
+      <button disabled class="send">send</button>
+  </div>
+</head>
+<body>
+
+
+  <script src="./jquery.js" type="text/javascript"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./application.js" type="text/javascript"></script>  
+</body>
+</html>
